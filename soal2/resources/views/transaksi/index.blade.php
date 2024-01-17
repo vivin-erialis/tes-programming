@@ -37,9 +37,26 @@
                                 @endforeach
                             </select>
                         </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Item</label>
+                            <input type="text" class="form-control" name="item" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Harga</label>
+                            <input type="number" class="form-control" name="harga" id="harga"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Jumlah</label>
+                            <input type="number" class="form-control" name="jumlah" id="jumlah"
+                                aria-describedby="emailHelp" onclick="hitungTotal()">
+                        </div>
+
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Total Bayar</label>
-                            <input type="text" class="form-control" name="total_bayar" id="exampleInputEmail1"
+                            <input type="number" class="form-control" name="total_bayar" id="total_bayar"
                                 aria-describedby="emailHelp">
                         </div>
                         <div class="modal-footer">
@@ -111,4 +128,15 @@
 
         </tbody>
     </table>
+
+    <script>
+        function hitungTotal() {
+          const harga = document.getElementById('harga').value;
+          const jumlah = document.getElementById('jumlah').value;
+
+          const totalBayar = harga * jumlah;
+
+          document.getElementById('total_bayar').value = totalBayar;
+        }
+      </script>
 @endsection

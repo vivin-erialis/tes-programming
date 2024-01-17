@@ -40,7 +40,9 @@
 
         <div class="row mt-4">
             <div class="col-md-12 text-right">
+
                 <p><strong>Total :</strong> Rp. {{ number_format($transaksi->total_bayar, 0, ',', '.') }}</p>
+                <p><strong>Total :</strong> {{$item->item}}</p>
             </div>
         </div>
     </div>
