@@ -17,9 +17,9 @@ function generateNumber(sequence) {
   }
 
   if (sequence[sequence.length - 1] === "M") {
-    result += currentDigit;
-  } else if (sequence[sequence.length - 1] === "N") {
     result = currentDigit + result;
+  } else if (sequence[sequence.length - 1] === "N") {
+    result += currentDigit ;
   }
 
   return result;
